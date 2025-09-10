@@ -3,6 +3,7 @@ import os
 import sys
 import pickle
 import random
+import copy
 
 import cv2
 import json_tricks as json
@@ -244,7 +245,7 @@ class COCODataset(Dataset):
         return len(self.data)
 
     def __getitem__(self, index):
-        joints_data = self.data[index].copy()
+        joints_data = copy.deepcopy(self.data[index])
 
         # Load image
         try:
