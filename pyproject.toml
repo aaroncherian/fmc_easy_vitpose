@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fmc-easy-vitpose"
+version = "0.1.0"
+description = "Fork of easy_ViTPose with opinionated packaging for FreeMoCap workflows"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Aaron Cherian" }]
+
+# Keep torch OUT of here on purpose (see notes below)
+dependencies = [
+  "numpy>=1.23",
+  "opencv-contrib-python",
+  "pillow>=9",
+  "tqdm",
+  "ultralytics>=8.0",
+  "filterpy",
+  "scipy",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff",
+  "black",
+  "pytest",
+]
+
+
+[tool.setuptools]
+packages = ["easy_ViTPose"]
+
+[tool.ruff]
+line-length = 100
