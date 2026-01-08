@@ -8,10 +8,9 @@ version = "0.1.0"
 description = "Fork of easy_ViTPose with opinionated packaging for FreeMoCap workflows"
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = { text = "Apache" }
 authors = [{ name = "Aaron Cherian" }]
 
-# Keep torch OUT of here on purpose (see notes below)
 dependencies = [
   "numpy>=1.23",
   "opencv-contrib-python",
@@ -20,7 +19,9 @@ dependencies = [
   "ultralytics>=8.0",
   "filterpy",
   "scipy",
+  "huggingface-hub"
 ]
+
 
 [project.optional-dependencies]
 dev = [
