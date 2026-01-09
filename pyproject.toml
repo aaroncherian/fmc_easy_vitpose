@@ -31,8 +31,8 @@ dev = [
 ]
 
 
-[tool.setuptools]
-packages = ["easy_ViTPose"]
+[tool.setuptools.packages.find]
+include = ["easy_ViTPose", "easy_ViTPose.*"]
 
 [tool.ruff]
 line-length = 100
