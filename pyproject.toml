@@ -19,6 +19,7 @@ dependencies = [
   "ultralytics>=8.0",
   "filterpy",
   "scipy",
+  "scikit-image",
   "huggingface-hub"
 ]
 
