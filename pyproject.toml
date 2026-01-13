@@ -20,7 +20,7 @@ dependencies = [
   "filterpy",
   "scipy",
   "scikit-image",
-  "huggingface-hub"
+  "huggingface-hub",
   "ffmpeg"
 ]
 
